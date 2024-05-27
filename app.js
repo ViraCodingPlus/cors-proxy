@@ -3,7 +3,7 @@ const cors = require('cors');
 const fetch = require('node-fetch');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 // Middleware
 app.use(cors());
@@ -29,8 +29,14 @@ app.post('/proxy', async (req, res) => {
     res.status(500).json({ error: 'Something went wrong' });
   }
 });
+app.get('/', (req, res) => {
+  res.send('Hello World')
+})
 
+app.get('/about', (req, res) => {
+  res.send('About route 🎉 ')
+})
 // Start the server
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+  console.log(`✅ Server is running on port ${PORT}`);
+})
