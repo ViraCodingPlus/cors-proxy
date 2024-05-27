@@ -13,7 +13,7 @@ This project sets up an Express server to act as a CORS proxy, allowing you to b
 1. **Clone the Repository:**
 
     ```sh
-    git clone https://github.com/your-username/cors-proxy.git
+    git clone https://github.com/ViraCodingPlus/cors-proxy.git
     cd cors-proxy
     ```
 
